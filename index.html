@@ -3,172 +3,251 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NVan | Fullstack Developer</title>
+  <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>NVan — Fullstack Developer</title>
+  <meta name="description" content="Portfolio of NVan, a fullstack developer specializing in CRM, loyalty platforms, Chatwoot, Zalo OA integration, Docker and cloud deployments." />
+  <meta name="author" content="NVan" />
+  <meta name="keywords" content="NVan, fullstack developer, CRM, loyalty platform, Chatwoot, Zalo OA, Docker, AWS, portfolio" />
+  <link rel="canonical" href="https://nvan2903.github.io/" />
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="NVan — Fullstack Developer" />
+  <meta property="og:description" content="Fullstack developer specializing in CRM, loyalty platforms, Chatwoot, Zalo OA integration, Docker and cloud deployments." />
+  <meta property="og:url" content="https://nvan2903.github.io/" />
+  <meta property="og:site_name" content="NVan Portfolio" />
+  <meta property="og:image" content="https://nvan2903.github.io/assets/img/avatar.jpg" />
+  <meta property="og:image:alt" content="Portrait of NVan" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NVan — Fullstack Developer" />
+  <meta name="twitter:description" content="Fullstack developer specializing in CRM, loyalty platforms, Chatwoot, Zalo OA integration, Docker and cloud deployments." />
+  <meta name="twitter:image" content="https://nvan2903.github.io/assets/img/avatar.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "NVan",
+    "url": "https://nvan2903.github.io/",
+    "image": "https://nvan2903.github.io/assets/img/avatar.jpg",
+    "jobTitle": "Fullstack Developer",
+    "description": "Fullstack developer specializing in CRM, loyalty platforms, Chatwoot and Zalo OA integrations.",
+    "knowsAbout": ["Fullstack Development", "CRM", "Loyalty Platforms", "Chatwoot", "Zalo OA", "Docker", "AWS", "Node.js", "React", "Next.js", "TypeScript"],
+    "sameAs": [
+      "https://github.com/nvan2903",
+      "https://www.linkedin.com/in/nvan2903"
+    ],
+    "email": "mailto:tnvan2903@gmail.com"
+  }
+  </script>
 </head>
-<body class="bg-slate-950 text-white">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Hero -->
-  <section class="min-h-screen flex items-center justify-center px-6">
-    <div class="max-w-5xl text-center">
-      <p class="text-blue-400 font-medium mb-4">
-        Hello, I'm
-      </p>
+  <header class="nav" role="banner">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="#top" aria-label="NVan — home">NVan<span style="color: var(--accent)">.</span></a>
 
-      <h1 class="text-6xl md:text-8xl font-bold mb-6">
-        NVan
-      </h1>
+      <button id="navToggle" class="nav-toggle" aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+      </button>
 
-      <p class="text-slate-400 text-xl max-w-2xl mx-auto">
-        Fullstack Developer specializing in CRM, Loyalty Platforms,
-        Chatwoot, Zalo OA Integration, Docker and Cloud Deployments.
-      </p>
-
-      <div class="mt-10 flex gap-4 justify-center">
-        <a href="#projects"
-          class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl">
-          View Projects
-        </a>
-
-        <a href="#contact"
-          class="border border-slate-700 px-6 py-3 rounded-xl">
-          Contact Me
-        </a>
-      </div>
+      <nav aria-label="Primary">
+        <ul id="navLinks" class="nav-links">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li>
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- About -->
-  <section class="py-24 px-6">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-4xl font-bold mb-8">About</h2>
-
-      <p class="text-slate-400 leading-8">
-        I build scalable web applications, customer engagement platforms,
-        CRM solutions and omnichannel integrations.
-      </p>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section class="py-24 px-6 bg-slate-900">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-4xl font-bold mb-10">
-        Tech Stack
-      </h2>
-
-      <div class="grid md:grid-cols-4 gap-4">
-
-        <div class="p-5 rounded-2xl bg-slate-800">React</div>
-        <div class="p-5 rounded-2xl bg-slate-800">Next.js</div>
-        <div class="p-5 rounded-2xl bg-slate-800">TypeScript</div>
-        <div class="p-5 rounded-2xl bg-slate-800">Node.js</div>
-
-        <div class="p-5 rounded-2xl bg-slate-800">Drupal</div>
-        <div class="p-5 rounded-2xl bg-slate-800">Docker</div>
-        <div class="p-5 rounded-2xl bg-slate-800">Linux</div>
-        <div class="p-5 rounded-2xl bg-slate-800">AWS</div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="py-24 px-6">
-    <div class="max-w-5xl mx-auto">
-
-      <h2 class="text-4xl font-bold mb-10">
-        Featured Projects
-      </h2>
-
-      <div class="grid md:grid-cols-2 gap-6">
-
-        <div class="bg-slate-900 p-6 rounded-2xl">
-          <h3 class="text-2xl font-semibold mb-3">
-            Loyalty Platform
-          </h3>
-
-          <p class="text-slate-400">
-            Customer loyalty and rewards management platform.
-          </p>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="avatar-wrap reveal">
+            <img class="avatar" src="assets/img/avatar.jpg" alt="Portrait of NVan" width="176" height="176" loading="eager" />
+          </div>
+          <div class="reveal">
+            <p class="eyebrow">Hello, I'm</p>
+            <h1 id="hero-heading" class="heading-xl">
+              NVan — <span class="accent">Fullstack Developer</span>
+            </h1>
+            <p class="lead">
+              I build scalable web applications, customer engagement platforms,
+              CRM solutions and omnichannel integrations.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#projects">
+                View Projects
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+              <a class="btn btn-ghost" href="assets/files/cv.pdf" download>
+                Download CV
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              </a>
+              <a class="btn btn-ghost" href="#contact">Contact Me</a>
+            </div>
+          </div>
         </div>
-
-        <div class="bg-slate-900 p-6 rounded-2xl">
-          <h3 class="text-2xl font-semibold mb-3">
-            Audience Management
-          </h3>
-
-          <p class="text-slate-400">
-            Dynamic segmentation and campaign targeting system.
-          </p>
-        </div>
-
-        <div class="bg-slate-900 p-6 rounded-2xl">
-          <h3 class="text-2xl font-semibold mb-3">
-            Chatwoot Integration
-          </h3>
-
-          <p class="text-slate-400">
-            Omnichannel customer communication platform.
-          </p>
-        </div>
-
-        <div class="bg-slate-900 p-6 rounded-2xl">
-          <h3 class="text-2xl font-semibold mb-3">
-            Zalo OA Integration
-          </h3>
-
-          <p class="text-slate-400">
-            Messaging, webhook and OAuth integrations.
-          </p>
-        </div>
-
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-24 px-6 bg-slate-900">
-    <div class="max-w-3xl mx-auto text-center">
-
-      <h2 class="text-4xl font-bold mb-6">
-        Let's Connect
-      </h2>
-
-      <p class="text-slate-400 mb-8">
-        Open to collaboration and exciting projects.
-      </p>
-
-      <div class="flex justify-center gap-6">
-
-        <a href="https://github.com/YOUR_USERNAME">
-          GitHub
-        </a>
-
-        <a href="https://linkedin.com">
-          LinkedIn
-        </a>
-
-        <a href="mailto:your@email.com">
-          Email
-        </a>
-
+    <section class="section section-alt" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading" class="section-title reveal">About</h2>
+        <p class="section-subtitle reveal">
+          I build scalable web applications, customer engagement platforms,
+          CRM solutions and omnichannel integrations. With a strong focus on
+          reliability and shipping fast, I help teams deliver customer-facing
+          products end-to-end — from API design to production deployment.
+        </p>
+        <div class="hero-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+          <div class="card reveal">
+            <h3 style="margin-top:0">Backend</h3>
+            <p style="color: var(--fg-muted); margin: 0;">Designing RESTful and event-driven APIs, integrating third-party services and optimizing data flows.</p>
+          </div>
+          <div class="card reveal">
+            <h3 style="margin-top:0">Frontend</h3>
+            <p style="color: var(--fg-muted); margin: 0;">Crafting accessible, responsive interfaces with modern frameworks and thoughtful UX.</p>
+          </div>
+          <div class="card reveal">
+            <h3 style="margin-top:0">DevOps</h3>
+            <p style="color: var(--fg-muted); margin: 0;">Containerizing services, automating CI/CD and deploying resilient workloads on the cloud.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 id="skills-heading" class="section-title reveal">Tech Stack</h2>
+        <p class="section-subtitle reveal">Tools and technologies I work with day to day.</p>
+        <div class="skills-grid reveal">
+          <div class="skill"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" loading="lazy" /><span class="skill-name">React</span></div>
+          <div class="skill"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="" loading="lazy" /><span class="skill-name">Next.js</span></div>
+          <div class="skill"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="" loading="lazy" /><span class="skill-name">TypeScript</span></div>
+          <div class="skill"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" loading="lazy" /><span class="skill-name">Node.js</span></div>
+          <div class="skill"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/drupal/drupal-original.svg" alt="" loading="lazy" /><span class="skill-name">Drupal</span></div>
+          <div class="skill"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="" loading="lazy" /><span class="skill-name">Docker</span></div>
+          <div class="skill"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="" loading="lazy" /><span class="skill-name">Linux</span></div>
+          <div class="skill"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" loading="lazy" /><span class="skill-name">AWS</span></div>
+          <div class="skill"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" loading="lazy" /><span class="skill-name">PostgreSQL</span></div>
+          <div class="skill"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" alt="" loading="lazy" /><span class="skill-name">Redis</span></div>
+          <div class="skill"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" alt="" loading="lazy" /><span class="skill-name">Nginx</span></div>
+          <div class="skill"><img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" loading="lazy" /><span class="skill-name">Git</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading" class="section-title reveal">Featured Projects</h2>
+        <p class="section-subtitle reveal">A selection of platforms I've designed and shipped.</p>
+        <div class="projects-grid">
+          <article class="card project reveal">
+            <h3>Loyalty Platform</h3>
+            <p>Customer loyalty and rewards management platform with points, tiers, and promotional engines.</p>
+            <div class="project-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Redis</span>
+            </div>
+            <div class="project-links">
+              <a href="#" aria-label="Loyalty Platform demo (link to be added)">Demo</a>
+              <a href="#" aria-label="Loyalty Platform source (link to be added)">Source</a>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <h3>Audience Management</h3>
+            <p>Dynamic segmentation and campaign targeting system with rule engines and bulk operations.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="#" aria-label="Audience Management demo (link to be added)">Demo</a>
+              <a href="#" aria-label="Audience Management source (link to be added)">Source</a>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <h3>Chatwoot Integration</h3>
+            <p>Omnichannel customer communication platform with custom channels, bots and analytics.</p>
+            <div class="project-tags">
+              <span class="tag">Chatwoot</span>
+              <span class="tag">Webhooks</span>
+              <span class="tag">Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="#" aria-label="Chatwoot Integration demo (link to be added)">Demo</a>
+              <a href="#" aria-label="Chatwoot Integration source (link to be added)">Source</a>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <h3>Zalo OA Integration</h3>
+            <p>Messaging, webhook and OAuth integrations for the Zalo Official Account ecosystem.</p>
+            <div class="project-tags">
+              <span class="tag">Zalo OA</span>
+              <span class="tag">OAuth</span>
+              <span class="tag">Node.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" aria-label="Zalo OA Integration demo (link to be added)">Demo</a>
+              <a href="#" aria-label="Zalo OA Integration source (link to be added)">Source</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-card reveal">
+          <h2 id="contact-heading" class="section-title">Let's Connect</h2>
+          <p class="section-subtitle" style="margin-inline:auto;">Open to collaboration and exciting projects.</p>
+          <div class="social-row">
+            <a class="social-link" href="https://github.com/nvan2903" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.67 5.56.67 11.83c0 5.02 3.26 9.27 7.78 10.77.57.11.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.17.69-3.84-1.36-3.84-1.36-.52-1.31-1.27-1.66-1.27-1.66-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.96.1-.74.4-1.25.73-1.54-2.53-.29-5.19-1.27-5.19-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17.91-.25 1.89-.38 2.86-.39.97.01 1.95.14 2.86.39 2.19-1.48 3.15-1.17 3.15-1.17.62 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.39-2.67 5.36-5.21 5.64.41.36.78 1.06.78 2.13 0 1.54-.01 2.78-.01 3.16 0 .31.21.67.79.55 4.52-1.5 7.77-5.75 7.77-10.77C23.33 5.56 18.27.5 12 .5z"/></svg>
+              GitHub
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/in/nvan2903" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.78 0h4.37v1.92h.06c.61-1.15 2.09-2.36 4.31-2.36 4.61 0 5.46 3.04 5.46 6.99V22h-4.56v-6.34c0-1.51-.03-3.45-2.1-3.45-2.1 0-2.43 1.64-2.43 3.34V22H8V8z"/></svg>
+              LinkedIn
+            </a>
+            <a class="social-link" href="mailto:tnvan2903@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year">2026</span> NVan. Built with HTML, CSS &amp; a little JavaScript.</p>
     </div>
-  </section>
-
-  <footer class="py-8 text-center text-slate-500">
-    © 2026 NVan. All rights reserved.
   </footer>
 
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
